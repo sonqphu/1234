@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "1246863231",
+    "firebase_url": "https://messio-31746.firebaseio.com",
+    "project_id": "messio-31746",
+    "storage_bucket": "messio-31746.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1246863231:android:f1fbb23d2aa4b1c5ef044a",
+        "android_client_info": {
+          "package_name": "com.app.messio.messio"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1246863231-lsp5tbu5a3hos3d5ma5bl4vrgrtntn55.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBy3hbY1Xb54x5ug00DBL9lXeTuXTXfiXg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1246863231-lsp5tbu5a3hos3d5ma5bl4vrgrtntn55.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
