@@ -4,7 +4,7 @@ import 'package:messio/config/Palette.dart';
 class NavigationPillWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    // TODO: implement build
+    
     return Container(
         child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
