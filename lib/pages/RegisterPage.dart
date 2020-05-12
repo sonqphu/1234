@@ -16,7 +16,7 @@ import 'package:messio/blocs/authentication/Bloc.dart';
 class RegisterPage extends StatefulWidget {
   @override
   State<StatefulWidget> createState() {
-   
+    
     return _RegisterPageState();
   }
 }
