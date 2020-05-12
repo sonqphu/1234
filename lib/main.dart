@@ -4,10 +4,9 @@ import 'package:messio/pages/ConversationPageSlide.dart';
 import 'package:messio/repositories/AuthenticationRepository.dart';
 import 'package:messio/repositories/StorageRepository.dart';
 import 'package:messio/repositories/UserDataRepository.dart';
-
-import 'blocs/authentication/Bloc.dart';
 import 'config/Palette.dart';
 import 'pages/RegisterPage.dart';
+import 'blocs/authentication/Bloc.dart';
 
 void main() {
   WidgetsFlutterBinding.ensureInitialized();

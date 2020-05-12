@@ -3,7 +3,6 @@ import 'package:messio/providers/AuthenticationProvider.dart';
 import 'package:messio/providers/BaseProviders.dart';
 
 class AuthenticationRepository {
-
   BaseAuthenticationProvider authenticationProvider = AuthenticationProvider();
 
   Future<FirebaseUser> signInWithGoogle() =>
