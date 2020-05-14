@@ -37,7 +37,7 @@ class _ChatListWidgetState extends State<ChatListWidget> {
 
   @override
   Widget build(BuildContext context) {
-    // TODO: implement build
+    
     return BlocBuilder<ChatBloc, ChatState>(builder: (context, state) {
       print(state);
       if (state is FetchedMessagesState) {

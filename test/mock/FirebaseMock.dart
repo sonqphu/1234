@@ -48,7 +48,7 @@ class StorageReferenceMock extends Mock implements StorageReference{
   StorageReferenceMock({this.childReference});
   @override
   StorageReference child(String path) {
-    // TODO: implement child
+    
     return childReference;
   }
 }
@@ -68,7 +68,7 @@ class DocumentReferenceMock extends Mock implements DocumentReference{
 
   @override
   Future<DocumentSnapshot> get({Source source = Source.serverAndCache}) {
-    // TODO: implement get
+    
     return Future<DocumentSnapshotMock>.value(documentSnapshotMock);
   }
   @override
