@@ -33,16 +33,21 @@ class AuthenticationBloc
     print(event);
     if (event is AppLaunched) {
       yield* mapAppLaunchedToState();
-    } else if (event is ClickedGoogleLogin) {
+    }
+    if (event is ClickedGoogleLogin) {
       yield* mapClickedGoogleLoginToState();
-    } else if (event is LoggedIn) {
+    }
+    if (event is LoggedIn) {
       yield* mapLoggedInToState(event.user);
-    } else if (event is PickedProfilePicture) {
+    }
+    if (event is PickedProfilePicture) {
       yield ReceivedProfilePicture(event.file);
-    } else if (event is SaveProfile) {
+    }
+    if (event is SaveProfile) {
       yield* mapSaveProfileToState(
           event.profileImage, event.age, event.username);
-    } else if (event is ClickedLogout) {
+    }
+    if (event is ClickedLogout) {
       yield* mapLoggedOutToState();
     }
   }
@@ -54,7 +59,7 @@ class AuthenticationBloc
       if (isSignedIn) {
         final user = await authenticationRepository.getCurrentUser();
         bool isProfileComplete =
-            await userDataRepository.isProfileComplete(user.uid); // if he is signed in then check if his profile is complete
+            await userDataRepository.isProfileComplete(); // if he is signed in then check if his profile is complete
         print(isProfileComplete);
         if (isProfileComplete) {      //if profile is complete then redirect to the home page
           yield ProfileUpdated();
@@ -77,8 +82,8 @@ class AuthenticationBloc
       FirebaseUser firebaseUser =
           await authenticationRepository.signInWithGoogle(); // show the google auth prompt and wait for user selection, retrieve the selected account
       bool isProfileComplete =
-          await userDataRepository.isProfileComplete(firebaseUser.uid); // check if the user's profile is complete
-      print(isProfileComplete);
+          await userDataRepository.isProfileComplete(); // check if the user's profile is complete
+      print('isProfileComplete $isProfileComplete');
       if (isProfileComplete) {
         yield ProfileUpdated(); //if profile is complete go to home page
       } else {
@@ -102,7 +107,7 @@ class AuthenticationBloc
   Stream<AuthenticationState> mapSaveProfileToState(
       File profileImage, int age, String username) async* {
     yield ProfileUpdateInProgress(); // shows progress bar
-    String profilePictureUrl = await storageRepository.uploadImage(
+    String profilePictureUrl = await storageRepository.uploadFile(
         profileImage, Paths.profilePicturePath); // upload image to firebase storage
     FirebaseUser user = await authenticationRepository.getCurrentUser(); // retrieve user from firebase
     await userDataRepository.saveProfileDetails(
@@ -114,4 +119,5 @@ class AuthenticationBloc
     yield UnAuthenticated(); // redirect to login page
     authenticationRepository.signOutUser(); // terminate session
   }
+
 }

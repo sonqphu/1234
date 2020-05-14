@@ -8,12 +8,20 @@
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:961172951755:android:e95b04442ac611a9a7814e",
+        "mobilesdk_app_id": "1:961172951755:android:32980123f89126f8a7814e",
         "android_client_info": {
-          "package_name": "com.app.messio.messio"
+          "package_name": "com.app.messio.messio1"
         }
       },
       "oauth_client": [
+        {
+          "client_id": "961172951755-akn99b9kje1bscl53gc6cdah9b1ki0b4.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.app.messio.messio1",
+            "certificate_hash": "944a0be7f32f4b4e79ea94accd3f1094f6db20e6"
+          }
+        },
         {
           "client_id": "961172951755-0e5hvk74dm7u83u8495fg47n50h7pl83.apps.googleusercontent.com",
           "client_type": 3
