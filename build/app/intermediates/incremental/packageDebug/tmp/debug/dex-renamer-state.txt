@@ -1,0 +1,10 @@
+#Fri May 15 14:52:15 ICT 2020
+path.2=classes3.dex
+path.1=classes2.dex
+path.0=classes.dex
+renamed.2=classes3.dex
+renamed.1=classes2.dex
+renamed.0=classes.dex
+base.2=E\:\\IT2\\GP1\\CICD\\CI\\12345\\1234\\build\\app\\intermediates\\dex\\debug\\out\\classes3.dex
+base.1=E\:\\IT2\\GP1\\CICD\\CI\\12345\\1234\\build\\app\\intermediates\\dex\\debug\\out\\classes2.dex
+base.0=E\:\\IT2\\GP1\\CICD\\CI\\12345\\1234\\build\\app\\intermediates\\dex\\debug\\out\\classes.dex

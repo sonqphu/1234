@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="default_web_client_id" translatable="false">961172951755-0e5hvk74dm7u83u8495fg47n50h7pl83.apps.googleusercontent.com</string>
+    <string name="firebase_database_url" translatable="false">https://messio-3ed48.firebaseio.com</string>
+    <string name="gcm_defaultSenderId" translatable="false">961172951755</string>
+    <string name="google_api_key" translatable="false">AIzaSyBdtlV1Z67xxcYGZnfS41rQ8Zd2ZKe8BCs</string>
+    <string name="google_app_id" translatable="false">1:961172951755:android:32980123f89126f8a7814e</string>
+    <string name="google_crash_reporting_api_key" translatable="false">AIzaSyBdtlV1Z67xxcYGZnfS41rQ8Zd2ZKe8BCs</string>
+    <string name="google_storage_bucket" translatable="false">messio-3ed48.appspot.com</string>
+    <string name="project_id" translatable="false">messio-3ed48</string>
+</resources>

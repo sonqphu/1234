@@ -128,10 +128,12 @@ class _ChatAppBarState extends State<ChatAppBar> {
                                                   style: Theme.of(context)
                                                       .textTheme
                                                       .headline6),
-                                              Text("@" + _username,
-                                                  style: Theme.of(context)
-                                                      .textTheme
-                                                      .subtitle2)
+                                              Expanded(
+                                                child: Text("@" + _username,
+                                                    style: Theme.of(context)
+                                                        .textTheme
+                                                        .subtitle2),
+                                              )
                                             ],
                                           );
                                         }))),
@@ -252,12 +254,13 @@ class _ChatAppBarState extends State<ChatAppBar> {
 
   showFilePicker(FileType fileType) async {
     File file;
-    if (fileType == FileType.IMAGE && SharedObjects.prefs.getBool(Constants.configImageCompression))
+    if (fileType == FileType.IMAGE &&
+        SharedObjects.prefs.getBool(Constants.configImageCompression))
       file = await ImagePicker.pickImage(
           source: ImageSource.gallery, imageQuality: 70);
     else
       file = await FilePicker.getFile(type: fileType);
-    
+
     if (file == null) return;
     chatBloc.dispatch(SendAttachmentEvent(chat.chatId, file, fileType));
     Navigator.pop(context);
